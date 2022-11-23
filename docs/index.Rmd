@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Incarceration Trends in the United States"
+author: "Sean Kim"
+date: '2022-11-21'
 output: html_document
 ---
 
@@ -11,35 +11,25 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+One of the sharpest manifestations of racism in the United States is its prison system. To explore deeply into this, this research will use data analysis and visualization skills to expose patterns of inequality by using the incarceration data collected by the Vera Institute.
 
 ## Introduction 
-[TODO]
+The incarceration trends in the United States exposes patterns of inequality. To show these patterns of inequality, I will do a research with data analysis and visualization skills on the incarceration data collected by the Vera Institute. One simple inequality the data show is that black people are much more likely to go to jail compared to white people.
+
+The direct stakeholders that are impacted by this research are the people in the United States who are incarcerated. The indirect stakeholders could be people who work in the system. People who are affected by the incarcerated people such as their families could also be indirect stakeholders. The central values that I need to engage are equality and equity.
+
+The questions that could be answered in this report are how the jail population changed over time and how it varies among states. Whether the incarceration trend differs according to the race or not could also be answered.
 
 ## Data Summary 
-[TODO]
 
-[TODO ... other sections ... See Canvas for details]
 
-_All the very best with your work!_
+## Growth of the U.S. Prison Population
 
+
+## Growth of Prison Population by State
+
+
+## <variable comparison that reveals potential patterns of inequality>
+
+
+## <a map shows potential patterns of inequality that vary geographically>

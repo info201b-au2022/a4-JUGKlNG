@@ -2,21 +2,7 @@ library(tidyverse)
 
 # The functions might be useful for A4
 source("../source/a4-helpers.R")
-
-## Test queries ----
-#----------------------------------------------------------------------------#
-# Simple queries for basic testing
-#----------------------------------------------------------------------------#
-# Return a simple string
-test_query1 <- function() {
-  return ("Hello world")
-}
-
-# Return a vector of numbers
-test_query2 <- function(num=6) {
-  v <- seq(1:num)
-  return(v)
-}
+incarceration <- read.csv('https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv')
 
 ## Section 2  ---- 
 #----------------------------------------------------------------------------#
@@ -28,17 +14,30 @@ test_query2 <- function(num=6) {
 # Growth of the U.S. Prison Population
 # Your functions might go here ... <todo:  update comment>
 #----------------------------------------------------------------------------#
-# This function ... <todo:  update comment>
+# This function calculates the total jail pop of each year
 get_year_jail_pop <- function() {
-  # TODO: Implement this function 
-return()   
+  df <- incarceration %>% 
+    select(year, total_jail_pop)
+  return(df)
 }
 
-# This function ... <todo:  update comment>
+# This function creates a bar chart with above function
 plot_jail_pop_for_us <- function()  {
-  # TODO: Implement this function 
-  return()   
-} 
+  df <- get_year_jail_pop()
+  labels <- labs(
+    title = "Increase of Jail Population in U.S. (1970-2018)",
+    x = "Year", y = "Total Jail Population",
+    caption = "Figure 1. Increase of Jail Population in U.S. (1970-2018). This chart shows that the jail population in U.S. increased steadily between 1980 and 2010."
+  )
+  barchart <- ggplot(df) +
+    geom_col(mapping = aes(x = year, y = total_jail_pop)) +
+    scale_y_continuous(labels = scales::comma) +
+    labels 
+  return(barchart)
+}
+
+chart <- plot_jail_pop_for_us()
+chart
 
 ## Section 4  ---- 
 #----------------------------------------------------------------------------#
