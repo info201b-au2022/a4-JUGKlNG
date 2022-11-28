@@ -21,15 +21,56 @@ The direct stakeholders that are impacted by this research are the people in the
 The questions that could be answered in this report are how the jail population changed over time and how it varies among states. Whether the incarceration trend differs according to the race or not could also be answered.
 
 ## Data Summary 
+``` {r data summary, echo = FALSE, include = FALSE}
+source("../source/analysis.R")
+```
 
+One of the key variables is the jail population in the U.S. The values of the total of this variable in 1970 and 2018 are **`r total_jail_population_1970`** and **`r total_jail_population_2018`** respectively. The highest jail population was in **`r highest_jail_population_state`** and the lowest was in **`r lowest_jail_population_state`**. Also, this variable increased by **`r total_jail_population_change`** from 1970 to 2018. In 2018, the jail population of white people was **`r white_jail_population_2018`** while that of black people was **`r black_jail_population_2018`**. The ratio of this black population to white population is **`r black_white_ratio_2018`**. This value shows inequality in the prison system since the ratio of black people to white people is much higher in prison. 
 
 ## Growth of the U.S. Prison Population
+``` {r jail population growth, echo = FALSE, include = FALSE}
+source("../source/analysis.R")
+```
 
+``` {r plot population chart, echo = FALSE}
+plot(chart_1)
+```
+
+Question: How did jail population in the U.S. change over time?
+This chart shows how the jail population in the United States changed from 1970 to 2018. According to the chart, it stayed similar during the 1970's. It then increased steadily until the 2008, and started to decrease after that.
 
 ## Growth of Prison Population by State
+``` {r jail population growth by state, echo = FALSE, include = FALSE}
+source("../source/analysis.R")
+```
 
+``` {r plot population by state chart, echo = FALSE}
+plot(chart_2)
+```
 
-## <variable comparison that reveals potential patterns of inequality>
+Question: How did jail population in the U.S. by states change over time?
+This chart shows how the jail population in the United States changed from 1970 to 2018 by states. According to the chart, jail population differs a lot by states. For example, California had the largest jail population with huge gap. However, the growth trend was similar for each state. It goes along with the growth of the total jail population of the United States.
 
+## General Population and Prison Population by Race
+``` {r general/jail population by race, echo = FALSE, include = FALSE}
+source("../source/analysis.R")
+```
 
-## <a map shows potential patterns of inequality that vary geographically>
+``` {r plot general/jail population by race scatterplot, echo = FALSE}
+plot(chart_3)
+```
+
+Question: How did jail population in the U.S. reveal potential patterns of inequality?
+This chart shows how the jail population in the United States reveals potential patterns of inequality between race. Each scatterplot visualizes general and jail population proportion of white people on black people in the United States in 2018. According to the chart, the ratio of black people to white people is larger for jail population compared to general population. This reveals that the current prison system might discriminate against black people.
+
+## Map of Jail Population by State
+``` {r jail population  by state map, echo = FALSE, include = FALSE}
+source("../source/analysis.R")
+```
+
+``` {r plot population by state map, echo = FALSE}
+plot(chart_4)
+```
+
+Question: How did jail population in the U.S. by states reveal potential patterns of inequality?
+This chart shows how the jail population in the United States reveal potential patterns of inequality between race by states. The map shows the jail population in the United States for each state. According to the map, the state with the largest jail population is California. In fact, California is one of the states with the most black people. This reveals that the current prison system might discriminate against black people.
